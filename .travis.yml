@@ -17,7 +17,7 @@ rust:
 
 before_script:
   - export PATH=$HOME/.cargo/bin:$PATH
-  - rustup target add arm-unknown-linux-gnueabi
+  - rustup target add thumbv7m-none-eabi
   - rustup component add rust-src
   - rustup component add rustfmt-preview
   - cargo install cargo-travis || echo "cargo-travis already installed"
