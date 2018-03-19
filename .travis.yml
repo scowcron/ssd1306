@@ -8,7 +8,8 @@ cache:
 
 addons:
   apt:
-    - binutils-arm-none-eabi
+    packages:
+      - binutils-arm-none-eabi
 
 rust:
   - nightly
