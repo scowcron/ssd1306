@@ -10,15 +10,16 @@ addons:
   apt:
     packages:
       - binutils-arm-none-eabi
+      - gcc-arm-linux-gnueabi
 
 rust:
   - nightly
 
 before_script:
   - export PATH=$HOME/.cargo/bin:$PATH
+  - rustup target add armv7-unknown-linux-gnueabi
   - rustup component add rust-src
   - rustup component add rustfmt-preview
-  - rustup target add armv7-unknown-linux-gnueabihf
   - cargo install cargo-travis || echo "cargo-travis already installed"
   - cargo install xargo || echo "xargo already installed"
 
